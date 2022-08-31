@@ -11,10 +11,10 @@ namespace TestApp.Controllers
 {
     public class UserProfileController : Controller
     {
-        private IUserRepository _userRepository;
+        private IUserProfileRepository _userRepository;
         private IConfiguration _configuration;
 
-        public UserProfileController(IUserRepository userRepository, IConfiguration configuration)
+        public UserProfileController(IUserProfileRepository userRepository, IConfiguration configuration)
         {
             _userRepository = userRepository;
             _configuration = configuration;

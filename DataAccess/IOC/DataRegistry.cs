@@ -7,7 +7,7 @@ namespace TestApp.Data
     {
         public static void ConfigureDataRegistry(this IServiceCollection services)
         {
-            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserProfileRepository, UserProfileRepository>();
         }
     }
 }

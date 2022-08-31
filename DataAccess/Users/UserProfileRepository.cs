@@ -10,10 +10,10 @@ using TestApp.DataSource;
 
 namespace TestApp.Data
 {
-    public class UserRepository : IUserRepository
+    public class UserProfileRepository : IUserProfileRepository
     {
         IFileStore _fileStore;
-        public UserRepository(IFileStore fileStore)
+        public UserProfileRepository(IFileStore fileStore)
         {
             _fileStore = fileStore;
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestApp.Data
 {
-    public interface IUserRepository
+    public interface IUserProfileRepository
     {
         Task<IEnumerable<UserProfile>> GetUsers();
         Task SaveUser(UserProfile user);
