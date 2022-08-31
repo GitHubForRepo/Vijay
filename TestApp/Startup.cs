@@ -25,7 +25,7 @@ namespace TestApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.ConfigureDataSourceRegistry(Configuration.GetValue<string>("FilePath"));
+            services.ConfigureDataSourceRegistry(Configuration.GetValue<string>("FileName"));
             services.ConfigureDataRegistry();
         }
 
