@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Users";
+}
+@model UserViewModel
+
+<h1>Users</h1>
+@using (Html.BeginForm("User", "UserProfile", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+
+<div>
+    @Html.LabelFor(model => model.FirstName) @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+</div>
+
+<div>
+    @Html.LabelFor(model => model.LastName) @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+</div>
+
+    <input type="submit" value="Submit" />
+    @Html.ActionLink("Click to view data", "Download", "Users", new { @class = "btn btn-primary" })
+    }
+
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+        </script>
+
+    }
+
+    @section Scripts
+    {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    }
+
